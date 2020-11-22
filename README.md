@@ -1,0 +1,2 @@
+# squares
+Simple JS game.
