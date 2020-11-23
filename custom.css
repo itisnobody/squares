@@ -1,0 +1,53 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+.bord {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: lightgrey;
+    position: relative;
+}
+
+.bord[data-lock="true"]::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: painted;
+    display: block;
+    content: '';
+    z-index: 10;
+    background-color: rgba(0,0,0,.15);
+}
+
+.box {
+    width: 19%;
+    padding-bottom: 19%;
+    margin: .5%;
+    transition: all 15ms ease-in;
+}
+
+.box[data-active="true"] {
+    cursor: pointer;
+}
+
+.box[data-active="true"]:hover {
+    transform: scale(1.02);
+}
+
+.box[data-active="true"]:active {
+    transform: scale(.98);
+}
+
+.result__item {
+    display: flex;
+}
+
+.result__item .name {
+    flex-grow: 1;
+}
